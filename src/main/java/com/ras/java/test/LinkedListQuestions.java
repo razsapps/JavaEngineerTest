@@ -34,7 +34,7 @@ public class LinkedListQuestions {
      * Given the head node in a linked list return the sublist provided by the start and end indexes
      *
      * Restrictions:
-     * You cannot use any other data structures including a new Linked List
+     * You cannot use any other data structures including a new Linked List (you must modify the provided nodes)
      *
      * Example:
      * node: 1 -> 2 -> 3-> 4 -> 5
@@ -48,6 +48,39 @@ public class LinkedListQuestions {
      * @return The sublist
      */
     public static SimpleListNode subList(SimpleListNode node, int start, int end) {
+        throw new NotAnsweredException();
+    }
+
+    /**
+     * Given a Linked List determine if that Linked List is a palindrome.
+     *
+     * Example:
+     * node: 1 -> 2 -> 3 -> 4 -> 3 -> 2 -> 1
+     * return: true
+     *
+     * @param node the head node in a linked list
+     * @return if the linked list is a palindrome
+     */
+    public static boolean isPalindrome(SimpleListNode node) {
+        throw new NotAnsweredException();
+    }
+
+    /**
+     * Move every n amount of items from the end of the list to the beginning of the list
+     *
+     * Restrictions:
+     * You cannot use any other data structures including a new Linked List (you must modify the provided nodes)
+     *
+     * Example:
+     * node: 1 -> 2 -> 3 -> 4 -> 5
+     * n: 2
+     * Output:
+     * The head node should be 4 with the following list 4 -> 5 -> 1 -> 2 -> 3
+     *
+     * @param node the head node in a linked list
+     * @param n The amount of elements from the end to move to the front
+     */
+    public static void moveFromTheEndToTheFront(SimpleListNode node, int n) {
         throw new NotAnsweredException();
     }
 }
