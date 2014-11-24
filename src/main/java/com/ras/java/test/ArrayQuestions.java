@@ -18,7 +18,7 @@ public class ArrayQuestions {
      * Do not use the String API
      *
      * Example:
-     * Input: ['N','o','e','l',' ','s','e','e','s',' ','L','e','o','n']
+     * input: ['N','o','e','l',' ','s','e','e','s',' ','L','e','o','n']
      * return: true
      *
      * @param input your given character array
@@ -39,9 +39,8 @@ public class ArrayQuestions {
      * The characters are in ASCII format
      *
      * Example:
-     * Input:
-     *      one: ['a','B','c','1','2']
-     *      two: ['B','c','1','a','2']
+     * one: ['a','B','c','1','2']
+     * two: ['B','c','1','a','2']
      * return: true
      *
      * @param one your given first char array
@@ -63,7 +62,7 @@ public class ArrayQuestions {
      * Do not use any other data structures. You should not temporarily store any of the words
      *
      * Example:
-     * Input: ["This","project","sucks","Rich","sucks",null,null]
+     * words: ["This","project","sucks","Rich","sucks",null,null]
      * Outcome:
      *      words will now be set to this: ["This","project","is","awesome","Rich","is","awesome"]
      *
@@ -82,8 +81,8 @@ public class ArrayQuestions {
      * Do not use any other data structures
      *
      * Example:
-     * Input: rotationCount: 1
-     *      board:
+     * rotationCount: 1
+     * board:
      *      [' ',' ','H']
      *      ['B','Y','E']
      *      [' ',' ','Y']
@@ -93,8 +92,8 @@ public class ArrayQuestions {
      *      [' ','Y',' ']
      *      ['Y','E','H']
      *
-     * Input: rotationCount: 2
-     *      board: Same as the input provided in the previous example
+     * rotationCount: 2
+     * board: Same as the input provided in the previous example
      *      [' ',' ','Y']
      *      ['B','Y','E']
      *      [' ',' ','H']
