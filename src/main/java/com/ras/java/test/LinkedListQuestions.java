@@ -83,4 +83,21 @@ public class LinkedListQuestions {
     public static void moveFromTheEndToTheFront(SimpleListNode node, int n) {
         throw new NotAnsweredException();
     }
+
+    /**
+     * There is a list that is in a loop.  Find the loop and break it.
+     *
+     * Restrictions:
+     * You cannot use any other data structures including a new Linked List (you must modify the provided nodes)
+     *
+     * Example:
+     * node: 1 -> 2 -> 3 -> 4 -> 5 -> 3 (This is the same exact 3 node as earlier. It will keep repeating 3,4,5)
+     * Output:
+     * The loop should be broken and the list should be 1 -> 2 -> 3 -> 4 -> 5
+     *
+     * @param node the head node in a linked list
+     */
+    public static void breakTheLoop(SimpleListNode node) {
+        throw new NotAnsweredException();
+    }
 }
