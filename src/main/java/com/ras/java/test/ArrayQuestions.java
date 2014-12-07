@@ -94,9 +94,9 @@ public class ArrayQuestions {
      *
      * rotationCount: 2
      * board: Same as the input provided in the previous example
-     *      [' ',' ','Y']
-     *      ['B','Y','E']
-     *      [' ',' ','H']
+     *      ['Y',' ',' ']
+     *      ['E','Y','B']
+     *      ['H',' ',' ']
      *
      * @param board The board that needs to be rotated in place
      * @param rotationCount The amount of times to rotate the board
