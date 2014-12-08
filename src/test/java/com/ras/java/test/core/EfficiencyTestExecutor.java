@@ -1,7 +1,5 @@
 package com.ras.java.test.core;
 
-import com.ras.java.test.ArrayQuestions;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -16,6 +14,7 @@ import static org.junit.Assert.fail;
 public class EfficiencyTestExecutor {
     //This is the deviation we are allowing in our efficiency tests between the expected time and actual time
     private static final double DEVIATION = 0.1;
+    private static final long MIN_EXPECTED_TIME = 10;
 
     private Class m_questionClass;
     private Class m_testClass;
@@ -100,17 +99,23 @@ public class EfficiencyTestExecutor {
     }
 
     /**
-     * @return true if the developer's question implementation is just as fast or faster than the test's answer implementation
+     * Tests if the developer's question implementation is just as fast or faster than the test's answer implementation
      */
     public void testEfficient() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         if (isAnyNull(m_questionClass, m_testClass, m_methodName, m_parameterTypes, m_questionInput, m_testInput))
             throw new IllegalArgumentException("All values must be provided to execute this method.");
 
         long expectedTime = getTiming(m_testClass, m_testInput);
+        //Add deviation
+        expectedTime = expectedTime + (long)(expectedTime * DEVIATION);
+        //Dealing with very small numbers (or 0) can be problematic. Let's use a minimum
+        if (expectedTime < MIN_EXPECTED_TIME)
+            expectedTime = MIN_EXPECTED_TIME;
+
         long actualTime = getTiming(m_questionClass, m_questionInput);
 
         System.out.println(m_testClass.getName() + "." + m_methodName + "{" + expectedTime + "," + actualTime + "}");
-        boolean efficient = actualTime <= (expectedTime + (expectedTime * DEVIATION));
+        boolean efficient = actualTime <= expectedTime;
         if (!efficient)
             fail("This may not be the most efficient way to implement the solution");
     }
