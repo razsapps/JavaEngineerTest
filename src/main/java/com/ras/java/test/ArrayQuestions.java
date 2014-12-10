@@ -56,7 +56,7 @@ public class ArrayQuestions {
      *
      * Details:
      * The array will be initialized with null padding on the end for all the words after "sucks" is replaced.
-     *      See example for details
+     *      See example for details. The array will contain the correct amount of nulls for the words provided
      *
      * Restrictions:
      * Do not use any other data structures. You should not temporarily store any of the words
