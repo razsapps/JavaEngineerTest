@@ -78,7 +78,7 @@ public class ArrayQuestions {
      * place on the gameboard for the amount of times specified.
      *
      * Restrictions:
-     * Do not use any other data structures
+     * Do not use any other data structures to recreate the board in it's entirety
      *
      * Example:
      * rotationCount: 1
