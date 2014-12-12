@@ -20,7 +20,7 @@ public class LinkedListQuestions {
      * Input:
      *      node: 21 -> 5 -> 7 -> 42 -> 23 -> 1
      *      splitValue: 21
-     * return: 1 -> 5 -> 7 -> 21 -> 23 -> 42
+     * return: 5 -> 7 -> 1 -> 21 -> 42 -> 23
      *
      * @param node the head node in a linked list
      * @param splitValue the value that we want to split the list on

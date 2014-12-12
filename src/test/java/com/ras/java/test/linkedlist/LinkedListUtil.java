@@ -1,4 +1,4 @@
-package com.ras.java.test;
+package com.ras.java.test.linkedlist;
 
 import com.ras.java.test.core.SimpleListNode;
 import org.junit.Test;
@@ -11,9 +11,8 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by RAS on 11/23/2014.
  */
-public class LinkedListQuestionsTest {
-
-    private static SimpleListNode createListFromString(String s) {
+public class LinkedListUtil {
+    public static SimpleListNode createListFromString(String s) {
         String[] parts = s.split("->");
 
         SimpleListNode head = new SimpleListNode(-1);

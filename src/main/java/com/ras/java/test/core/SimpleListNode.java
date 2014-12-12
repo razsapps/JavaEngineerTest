@@ -46,7 +46,7 @@ public class SimpleListNode {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder(getValue());
+        StringBuilder sb = new StringBuilder().append(getValue());
 
         SimpleListNode next = getNext();
         while (next != null) {
