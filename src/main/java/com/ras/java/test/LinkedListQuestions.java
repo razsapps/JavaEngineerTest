@@ -54,6 +54,9 @@ public class LinkedListQuestions {
     /**
      * Given a Linked List determine if that Linked List is a palindrome.
      *
+     * Details:
+     * Speed is more important than memory usage
+     *
      * Example:
      * node: 1 -> 2 -> 3 -> 4 -> 3 -> 2 -> 1
      * return: true

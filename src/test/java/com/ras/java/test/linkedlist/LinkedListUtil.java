@@ -22,4 +22,15 @@ public class LinkedListUtil {
         }
         return head.getNext();
     }
+
+    public static SimpleListNode createListForEachNumber(int size) {
+        if (size < 1)
+            throw new IllegalArgumentException("Please provide a valid size");
+        SimpleListNode node = new SimpleListNode(1);
+        SimpleListNode end = node;
+
+        for (int i = 2; i <= size; i++)
+            end = end.setNext(i);
+        return node;
+    }
 }
