@@ -62,16 +62,9 @@ public class LinkedListQuestionsSplitListOnValueTest {
 
     @Test
     public void testEfficiency() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        int size = 15000000;
-        SimpleListNode oneStart = new SimpleListNode(1);
-        SimpleListNode oneEnd = oneStart;
-        SimpleListNode twoStart = new SimpleListNode(1);
-        SimpleListNode twoEnd = twoStart;
-
-        for (int i = 2; i <= size; i++) {
-            oneEnd = oneEnd.setNext(i);
-            twoEnd = twoEnd.setNext(i);
-        }
+        final int size = 15000000;
+        SimpleListNode oneStart = LinkedListUtil.createListForEachNumber(size);
+        SimpleListNode twoStart = LinkedListUtil.createListForEachNumber(size);
 
         int half = size/2;
         new EfficiencyTestExecutor()
