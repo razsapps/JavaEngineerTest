@@ -98,7 +98,7 @@ public class EfficiencyTestExecutor {
         //This is a special case in case the input is a single array of objects.  This would cause each element
         //in the array to be handled as a a specific parameter. By wrapping it in another array we ensure this
         //behaves correctly
-        if (m_parameterTypes.length == 1)
+        if (m_parameterTypes.length == 1 && m_parameterTypes[0].isArray())
             inputs = new Object[]{inputs};
         method.invoke(null, inputs);
         return System.currentTimeMillis() - start;
