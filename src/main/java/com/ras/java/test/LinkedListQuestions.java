@@ -77,13 +77,14 @@ public class LinkedListQuestions {
      * Example:
      * node: 1 -> 2 -> 3 -> 4 -> 5
      * n: 2
-     * Output:
+     * return:
      * The head node should be 4 with the following list 4 -> 5 -> 1 -> 2 -> 3
      *
      * @param node the head node in a linked list
      * @param n The amount of elements from the end to move to the front
+     * @return The head node of the list now that it has been modified
      */
-    public static void moveFromTheEndToTheFront(SimpleListNode node, int n) {
+    public static SimpleListNode moveFromTheEndToTheFront(SimpleListNode node, int n) {
         throw new NotAnsweredException();
     }
 
