@@ -13,18 +13,18 @@ import static org.junit.Assert.assertFalse;
 public class LinkedListQuestionsIsPalindromeTest {
     @Test
     public void testExample() {
-        assertTrue(isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 3 -> 2 -> 1")));
+        assertTrue(LinkedListQuestions.isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 3 -> 2 -> 1")));
     }
 
     @Test
     public void testEvenSizedList() {
-        assertTrue(isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 4 -> 3 -> 2 -> 1")));
+        assertTrue(LinkedListQuestions.isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 4 -> 3 -> 2 -> 1")));
     }
 
     @Test
     public void testSingleNode() {
         try {
-            assertTrue(isPalindrome(new SimpleListNode(1)));
+            assertTrue(LinkedListQuestions.isPalindrome(new SimpleListNode(1)));
         }
         catch (IllegalArgumentException e) {
             //This is acceptable let's pass
@@ -33,13 +33,13 @@ public class LinkedListQuestionsIsPalindromeTest {
 
     @Test
     public void testNotPalindrome() {
-        assertFalse(isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 1")));
+        assertFalse(LinkedListQuestions.isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 1")));
     }
 
     @Test
     public void testDefensiveNull() {
         try {
-            assertFalse(isPalindrome(null));
+            assertFalse(LinkedListQuestions.isPalindrome(null));
         }
         catch (IllegalArgumentException e) {
             //This is acceptable let's pass
