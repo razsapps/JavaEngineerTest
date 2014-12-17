@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-public class LinkedListIsPalindromeTest {
+public class LinkedListQuestionsIsPalindromeTest {
     @Test
     public void testExample() {
         assertTrue(isPalindrome(LinkedListUtil.createListFromString("1 -> 2 -> 3 -> 4 -> 3 -> 2 -> 1")));
