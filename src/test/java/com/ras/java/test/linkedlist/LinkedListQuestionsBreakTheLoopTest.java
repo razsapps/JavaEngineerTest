@@ -18,7 +18,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode nodeThree = head.getNext().getNext();
         SimpleListNode nodeFive = nodeThree.getNext().getNext();
         nodeFive.setNext(nodeThree);
-        breakTheLoop(head);
+        LinkedListQuestions.breakTheLoop(head);
         assertTrue("You failed to break the loop or you broke it at the wrong spot", LinkedListUtil.checkSize(head, 5));
         assertEquals("1 -> 2 -> 3 -> 4 -> 5", head.toString());
     }
@@ -28,7 +28,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode head = LinkedListUtil.createListForEachNumber(3);
         SimpleListNode nodeFive = head.getNext().getNext();
         nodeFive.setNext(head);
-        breakTheLoop(head);
+        LinkedListQuestions.breakTheLoop(head);
         assertTrue("You failed to break the loop or you broke it at the wrong spot", LinkedListUtil.checkSize(head, 3));
         assertEquals("1 -> 2 -> 3", head.toString());
     }
@@ -37,7 +37,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
     public void testSingleNode() {
         SimpleListNode head = new SimpleListNode(1);
         head.setNext(head);
-        breakTheLoop(head);
+        LinkedListQuestions.breakTheLoop(head);
         assertTrue("You failed to break the loop or you broke it at the wrong spot", LinkedListUtil.checkSize(head, 1));
         assertEquals("1", head.toString());
     }
@@ -45,7 +45,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
     @Test
     public void testDefensiveNull() {
         try {
-            breakTheLoop(null);
+            LinkedListQuestions.breakTheLoop(null);
             //No error should probably be acceptable as well
             return;
         }
@@ -59,7 +59,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode head = LinkedListUtil.createListForEachNumber(5);
 
         try {
-            breakTheLoop(head);
+            LinkedListQuestions.breakTheLoop(head);
             //If there is no specific error thrown then the list should not be modified
             assertEquals("1 -> 2 -> 3 -> 4 -> 5", head.toString());
         }
@@ -94,7 +94,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode questionNode = generateEfficiencyList(size, loopValue);
         new EfficiencyTestExecutor()
                 .setTestClass(this.getClass())
-                .setQuestionClass(this.getClass())
+                .setQuestionClass(LinkedListQuestions.class)
                 .setMethodName("breakTheLoop")
                 .setParameterTypes(SimpleListNode.class)
                 .setTestInput(testNode)
@@ -110,7 +110,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode questionNode = generateEfficiencyList(size, loopValue);
         new EfficiencyTestExecutor()
                 .setTestClass(this.getClass())
-                .setQuestionClass(this.getClass())
+                .setQuestionClass(LinkedListQuestions.class)
                 .setMethodName("breakTheLoop")
                 .setParameterTypes(SimpleListNode.class)
                 .setTestInput(testNode)
@@ -126,7 +126,7 @@ public class LinkedListQuestionsBreakTheLoopTest {
         SimpleListNode fast = node;
 
         //First see if they intersect and there is a loop
-        while (fast != null || fast.getNext() != null) {
+        while (fast != null && fast.getNext() != null) {
             //We want too break before assigning them for a special edge case that the first node is the loop point
             if (slow.getNext() == fast.getNext().getNext())
                 break;
