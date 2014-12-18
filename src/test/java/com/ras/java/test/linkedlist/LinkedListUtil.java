@@ -33,4 +33,13 @@ public class LinkedListUtil {
             end = end.setNext(i);
         return node;
     }
+
+    public static boolean checkSize(SimpleListNode node, int size) {
+        while (node != null && size > 0) {
+            node = node.getNext();
+            size--;
+        }
+
+        return size == 0 && node == null;
+    }
 }
